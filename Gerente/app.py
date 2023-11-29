@@ -25,7 +25,7 @@ def delete_super():
                 if not line.startswith(f"{name}/"):
                     file.write(line)
         # Redirige nuevamente a la página de eliminación después de la operación
-        return redirect(url_for('delete_super'))
+        return redirect(url_for('index'))
 
     # Si la solicitud es GET, simplemente renderiza la plantilla de eliminación
     return render_template('Delete_Super.html')
@@ -36,7 +36,7 @@ def add_super():
         name = request.form['name']
         salary = request.form['salary']
         with open('supervisores.txt', 'a') as file:
-            file.write(f"{name}/n{name}@example.com/contraseña/{salary}/Supervisor\n")
+            file.write(f"\n{name}/{name}@example.com/contraseña/{salary}/Supervisor")
         return redirect(url_for('index'))
 
     return render_template('Add_Super.html')
