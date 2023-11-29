@@ -1,0 +1,23 @@
+<!-- templates/base.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Encabezado común para todas las páginas -->
+    <!-- ... -->
+    <!-- Enlace a Interface_Gerente.CSS -->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='Interface_Gerente.css') }}">
+</head>
+<body>
+    <div class="top-bar"></div> <!-- Franja gris en la parte superior -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- ... -->
+        <div class="navbar-brand">{{ title }}</div> <!-- Título dinámico -->
+        <!-- ... -->
+    </nav>
+
+    <div class="container-main">
+        <!-- Contenido específico de cada página -->
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* Estilo para la barra de navegación */
+.navbar-brand {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#navbarText {
+    justify-content: space-between;
+}
+
+/* Estilo para el contenedor principal de la página del gerente */
+.container-main {
+    margin: 40px;
+    padding-block: 30px;
+    border: 2px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para el título "Manage supervisors" */
+.manage-supervisors {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 30px;
+}
+
+/* Estilo para las tarjetas de gestión de supervisores */
+.container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 18rem;
+    text-align: center;
+}
+
+.card i {
+    font-size: 4rem;
+    margin-bottom: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 14px;
+}
+
+/* Estilo para los botones en las tarjetas */
+.card .btn-primary {
+    background-color: #0d5e66;
+    border-color: #0d5e66;
+    margin-top: 10px;
+}
+
+.card .btn-primary i {
+    margin-left: 5px;
+}
+
+.card i {
+    font-size: 4rem;
+    margin-bottom: 5px;
+    border: 2px solid #0d5e66; /* Añade borde al icono */
+    border-radius: 8px; /* Borde redondeado */
+    padding: 5px; /* Espaciado interior para el borde */
+    margin-top: 5px; /* Ajusta la posición hacia abajo */
+}
+
+/* Ajuste de la posición de los iconos */
+.card i.fa-coins {
+    margin-top: 30px;
+}
+
+.card i.fa-user-plus {
+    margin-top: 25px;
+}
+
+.card i.fa-user-minus {
+    margin-top: 20px;
+}
+
+/* Estilo para los botones en las tarjetas */
+.card .btn-primary {
+    background-color: #0d5e66;
+    border-color: #0d5e66;
+    margin-top: 10px;
+    color: #fff;
+    border-radius: 10px; /* Borde más suave (redondo) */
+}
+
+.card .btn-primary i {
+    margin-left: 5px;
+}
+
+.card .btn-primary i {
+    font-size: 1.5rem; /* Ajusta el tamaño de la flecha */
+}
+
+/* Ajuste del espacio en las tarjetas */
+.card {
+    margin-right: 10px;
+    margin-bottom: 20px;
+    width: 18rem;
+    text-align: center;
+    padding: 15px; /* Ajusta el espacio interior de la tarjeta */
+}
+
+/* Estilo de la barra superior */
+.navbar {
+    background-color: #0d5e66;
+}
+
+/* Estilo de los botones */
+.btn-primary {
+    border-radius: 20px; /* Borde más suave (redondo) */
+    font-weight: bold; /* Tipografía en negrita */
+}
+
+/* Estilo para la primera fila de la tabla */
+th {
+    background-color: #0d5e66;
+    color: white; /* Texto en blanco */
+}
+
+/* Estilos para la barra de título Salarios*/
+.title-bar {
+    background-color: #363333; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    color: white; /* Color del texto */
+    font-size: 15px; /* Font*/
+}
+
+.title-bar h2 {
+    margin: 0; /* Elimina el margen predeterminado del encabezado h2 */
+}
+
+/* Estilo para la tabla de salarios */
+.container-main table {
+    width: calc(100% - 100px); /* El ancho es el 100% menos 100px (50px en cada borde) */
+    border-collapse: collapse;
+    margin-top: 20px;
+    border-radius: 10px; /* Borde redondeado */
+    overflow: hidden; /* Evita que los bordes redondeados se extiendan más allá de la tabla */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    margin-left: 50px; /* Añade margen izquierdo de 50px */
+    margin-right: 50px; /* Añade margen derecho de 50px */
+}
+
+.container-main table th {
+    background-color: #0d5e66; /* Color de fondo para la primera fila */
+    color: white; /* Texto en blanco */
+    border: 1px solid #ddd; /* Borde para la primera fila */
+}
+/* Estilo adicional específico para Delete_Super.html */
+.form-container {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+    color: #0d5e66;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #0d5e66;
+    color: white;
+    cursor: pointer;
+}

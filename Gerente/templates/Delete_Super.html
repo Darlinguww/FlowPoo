@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Tus encabezados aquí -->
+    
+    <style>
+        /* Estilo para la tabla de salarios */
+        table {
+            width: calc(100% - 100px); /* El ancho es el 100% menos 100px (50px en cada borde) */
+            margin: 20px auto; /* Centrar la tabla y dar margen superior e inferior de 20px */
+            border-collapse: collapse;
+            border-radius: 10px; /* Borde redondeado */
+            overflow: hidden; /* Evita que los bordes redondeados se extiendan más allá de la tabla */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #0d5e66; /* Color de fondo para la primera fila */
+            color: white; /* Texto en blanco */
+        }
+
+        /* Estilo adicional específico para Delete_Super.html */
+        h2 {
+            text-align: center;
+            margin-top: 20px;
+            color: #0d5e66;
+        }
+
+        form {
+            width: 50%;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            color: #0d5e66;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #0d5e66;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="title-bar">
+        <h2>Delete Supervisor</h2>
+    </div>
+
+    <form action="{{ url_for('delete_supervisor_route') }}" method="post">
+        <label for="name">Supervisor's Name:</label>
+        <input type="text" id="name" name="name" required>
+        <br>
+        <label for="salary">Salary:</label>
+        <input type="number" id="salary" name="salary" required min="0"> <!-- Agregado min="0" -->
+        <br>
+        <input type="submit" value="Delete Supervisor">
+    </form>
+{% endblock %}
+</body>
+</html>
