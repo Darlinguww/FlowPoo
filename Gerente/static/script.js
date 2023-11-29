@@ -1,3 +1,20 @@
+var arrayData = new Array();
+var archivoTxt = new XMLHttRequest();
+var fileruta = 'index.txt'
+
+archivoTxt.open("GET",fileruta,false);
+archivoTxt.send("SEND",fileruta,false);
+
+var txt = archivoTxt.responseText;
+
+for (var i = 0; i < txt.lenght; i++){
+    arrayData.push(txt[i]);
+}
+
+arrayData.forEach(function(data){
+    console.log(data);
+})
+
 
 // Función para redirigir a Salarios.html
 function redirectToSalarios() {

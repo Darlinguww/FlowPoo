@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Supervisor's tasks</title>
-    <!--Bootstrap: Framework de CSS -->
+    <!-- Bootstrap: Framework de CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
      <!-- Enlace al cdn Awesome-->
@@ -12,7 +12,6 @@
      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!-- Enlace a interface CSS-->
     <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='Interface_Gerente.css') }}">
-
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -38,13 +37,13 @@
         <div class="container">
           <!-- Para la tarjeta "Change supervisors' salaries" -->
               <div class="card" style="width: 18rem;">
-                <a href="{{ url_for('salarios') }}">
+                <a href="{{ url_for('manage_salaries') }}">
                     <i class="fa-solid fa-coins"></i>
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">Change supervisors' salaries.</h5>
                     <p class="card-text">Access the list of supervisors you are responsible for and search for the supervisor by name or salary. Then, if you wish, change the salary.</p>
-                    <a href="{{ url_for('salarios') }}" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="{{ url_for('manage_salaries') }}" class="btn btn-primary"><i class="fa-solid fa-arrow-right"></i></a>
                 </div>
               </div>
 

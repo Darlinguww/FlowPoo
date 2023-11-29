@@ -1,79 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Tus encabezados aquí -->
-    
-    <style>
-        /* Estilo para la tabla de salarios */
-        table {
-            width: calc(100% - 100px); /* El ancho es el 100% menos 100px (50px en cada borde) */
-            margin: 20px auto; /* Centrar la tabla y dar margen superior e inferior de 20px */
-            border-collapse: collapse;
-            border-radius: 10px; /* Borde redondeado */
-            overflow: hidden; /* Evita que los bordes redondeados se extiendan más allá de la tabla */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #0d5e66; /* Color de fondo para la primera fila */
-            color: white; /* Texto en blanco */
-        }
-
-        /* Estilo adicional específico para Delete_Super.html */
-        h2 {
-            text-align: center;
-            margin-top: 20px;
-            color: #0d5e66;
-        }
-
-        form {
-            width: 50%;
-            margin: 0 auto;
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        label {
-            display: block;
-            margin-top: 10px;
-            color: #0d5e66;
-        }
-
-        input {
-            width: 100%;
-            padding: 8px;
-            margin-top: 5px;
-            margin-bottom: 10px;
-            box-sizing: border-box;
-        }
-
-        input[type="submit"] {
-            background-color: #0d5e66;
-            color: white;
-            cursor: pointer;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Supervisor</title>
+    <!-- Bootstrap: Framework de CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+     <!-- Enlace al cdn Awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+     integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Enlace a interface CSS-->
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='Interface_Gerente.css') }}">
 </head>
-{% extends 'base.html' %}
-
-{% block content %}
-    <div class="title-bar">
-        <h2>Delete Supervisor</h2>
-    </div>
-
-    <form action="{{ url_for('delete_supervisor_route') }}" method="post">
-        <label for="name">Supervisor's Name:</label>
-        <input type="text" id="name" name="name" required>
-        <br>
-        <label for="salary">Salary:</label>
-        <input type="number" id="salary" name="salary" required min="0"> <!-- Agregado min="0" -->
-        <br>
-        <input type="submit" value="Delete Supervisor">
-    </form>
-{% endblock %}
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <div class="navbar-brand" >Welcome Manager!</div>
+         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button> 
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Display Report</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://fantastic-sable-31db3f.netlify.app" ><i class="fa-solid fa-arrow-right-from-bracket"></i>    Log out</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container-main">
+        <h2 class="manage-supervisors" style="margin-top: 30px;">Delete Supervisor</h2>
+        <div class="container">
+          <form action="{{ url_for('delete_super') }}" method="post">
+            <label for="name">Supervisor's Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <input type="submit" value="Delete Supervisor">
+          </form>
+        </div>
+      </div>
 </body>
 </html>

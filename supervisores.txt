@@ -1,0 +1,5 @@
+Jose Manuel/jmanuel@uninorte.edu.com/31jo03se91/1.000.000/Supervisor
+Andrés Gomez/agomez@uninorte.edu.com/31an74dres/1.200.000/Supervisor
+Darlen Arias/darlen@darlen.edu.com/30dar04len/1.000.000/Supervisor
+Juan Pérez/juan.perez@example.com/20/800.000/Supervisor
+María García/maria.garcia@example.com/16/650.000/Supervisor

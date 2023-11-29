@@ -15,9 +15,12 @@
      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
      <!-- Enlace a Interface_Gerente.CSS -->
      <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='Interface_Gerente.css') }}">
+
+     <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+     <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
        
         <style>
-            /* Estilo para la tabla de salarios */
+        
             table {
                 width: calc(100% - 100px); /* El ancho es el 100% menos 100px (50px en cada borde) */
                 margin: 20px auto; /* Centrar la tabla y dar margen superior e inferior de 20px */
@@ -35,37 +38,89 @@
                 background-color: #0d5e66; /* Color de fondo para la primera fila */
                 color: white; /* Texto en blanco */
             }
+
+            /* Estilo adicional específico para Salario.html */
+            form {
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+            }
         </style>
     </head>
     <body>
+<<<<<<< HEAD
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <!-- Contenido de la barra de navegación... -->
+        </nav>
+    
+        <div class="container-main">
+            <h2 class="manage-supervisors." style="margin-top: 30px;">Manage Supervisors</h2>
+            <div class="container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Salary</th>
+                            <th>Position</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for supervisor in supervisors %}
+                            <tr>
+                                <td>{{ supervisor[0] }}</td>
+                                <td>{{ supervisor[1] }}</td>
+                                <td>{{ supervisor[2] }}</td>
+                                <td>{{ supervisor[3] }}</td>
+                                <td>
+                                    <form action="{{ url_for('manage_salaries') }}" method="post">
+                                        <input type="hidden" name="name_to_update" value="{{ supervisor[0] }}">
+                                        <input type="text" name="new_salary" placeholder="New Salary" required>
+                                        <button type="submit">Update</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+=======
+
+
         <div class="title-bar">
             <h2>Salaries Dashboard</h2>
         </div>
-
         <table class="table">
             <thead>
                 <tr>
+                    <th>Action</th>
                     <th>Name</th>
                     <th>Salary</th>
-                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
-                {% for supervisor in supervisors %}
                 <tr>
-                    <td>{{ supervisor.name }}</td>
-                    <td>{{ supervisor.salary }}</td>
-                    <td>
-                        <form action="{{ url_for('update_salary') }}" method="post">
-                            <input type="hidden" name="name" value="{{ supervisor.name }}">
-                            <input type="number" name="new_salary" placeholder="New Salary" required>
-                            <button type="submit" class="btn-submit">Update</button>
-                        </form>
-                    </td>
+                    <td><input type="button" value="Save"></td>
+                    <td>Jose</td>
+                    <td>8000000</td>
+                    <label for ="action">Enter New Salary:</label>
+                    <input type="text" id="action" action="action" required minlength="4" maxlength="16" size="10" />
                 </tr>
-                {% endfor %}
+                <tr>
+                    <td><input type="button" value="Save"></td>
+                    <td>Andres</td>
+                    <td>7000000</td>
+                </tr>
+                <tr>
+                    <td><input type="button" value="Save"></td>
+                    <td>Darlen</td>
+                    <td>7000000</td>
+                </tr>
             </tbody>
         </table>
+>>>>>>> 50f3d9f0d719cdff29f2f291f92c04931c6e3d45
     </body>
-</html>
+    </html>
 {% endblock %}
