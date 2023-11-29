@@ -1,0 +1,14 @@
+Jose Manuel/jmanuel@uninorte.edu.com/31jo03se91/1.000.000/Supervisor
+Andrés Gomez/agomez@uninorte.edu.com/31an74dres/1.200.000/Gerente
+Darlen Arias/darlen@darlen.edu.com/30dar04len/1.000.000/Supervisor
+Juan Pérez/juan.perez@example.com/20/800.000/Vendedor
+María García/maria.garcia@example.com/16/800.000/Vendedor
+Luis Rodríguez/luis.rodriguez@example.com/19/800.000/Vendedor
+Ana Martínez/ana.martinez@example.com/22/800.000/Vendedor
+Miguel Sánchez/miguel.sanchez@example.com/12/800.000/Vendedor
+Juana Sánchez/jana.sanchez@example.com/17/800.000/Vendedor
+Laura López/laura.lopez@example.com/15/800.000/Vendedor
+Carlos Fernández/carlos.fernandez@example.com/18/800.000/Vendedor
+Gabriela Torres/gabriela.torres@example.com/19/800.000/Vendedor
+Javier Ramírez/javier.ramirez@example.com/20/800.000/Vendedor
+Carolina Díaz/carolina.diaz@example.com/16/800.000/Vendedor
