@@ -1,0 +1,127 @@
+body {
+    display: flex; /* Establece el contenedor principal como un flexbox */
+    flex-direction: column; /* Establece la dirección del flexbox a columna */
+    align-content: space-around;
+    height: 100vh; /* Establece la altura del cuerpo al 100% del viewport */
+    background-image: url('present.jpg'); /* Establece una imagen de fondo */
+    background-size: cover; /* Ajusta la imagen de fondo para cubrir todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    position:relative; 
+    padding-bottom:3em;
+    min-height: 100vh;
+}
+
+.Footer{
+    width: 100%;
+    background-color: #04345e;
+    position:absolute;
+    bottom:0;
+}
+
+.Footer .footer-section-about{
+    width: 100%;
+}
+.Footer .footer-section-about h2{
+    color: #fff;
+    font-size: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.Footer .footer-section-about p{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.Footer .Information-desarrolladores{
+    width: 100%;
+}
+.Footer .Information-desarrolladores h2{
+    color: #fff;
+    margin-left: 30px;
+    margin-right: 30px;
+    font-size: 15px;
+}
+.Footer .Information-desarrolladores .contact{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 25px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.Footer .footer-bottom{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: 50px;
+    padding: 10px 0px;
+
+}
+
+.Footer .footer-bottom .p{
+    margin-left: 30px;
+}
+
+/* Estilos para el contenedor principal */
+.container-form {
+    display: flex; /* Establece el contenedor como un flexbox */
+    flex-direction: column; /* Establece la dirección del flexbox a columna */
+    border-radius: 20px; /* Añade esquinas redondeadas al contenedor */
+    background-color: rgba(173, 184, 211, 0.75); /* Agrega color al contenedor */
+    height: 300px; /* Establece la altura del contenedor */
+    max-width: 500px; /* Establece el ancho máximo del contenedor */
+    transition: all 1s ease; /* Agrega una transición suave a todas las propiedades del contenedor */
+    margin: 0 auto; /* Establece un margen alrededor del contenedor */
+    margin-top: 80px;
+    padding:0 30px; /* Establece un relleno interno a los elementos de la sección */
+}
+
+.container-form  h1{
+    font-size: 2rem; /* Establece el tamaño de fuente del título */
+    color: #333; /* Establece el color del texto */
+}
+
+.container-form  p{
+    margin: 15px 0; /* Establece un margen superior e inferior al párrafo */
+    color: #555; /* Establece el color del texto */
+}
+
+.container-form  h2{
+    font-size: 1.4rem; /* Establece el tamaño de fuente del subtítulo */
+    color: rgba(107, 81, 9, 0.856) /* Establece el color del texto */
+}
+
+.container-form  a{
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color: rgba(107, 81, 9, 0.856); /* Establece el color del texto */
+    display: block; /* Establece el enlace como un bloque */    
+    width: 14px;
+    height: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    margin: 130 px 130px;
+    padding: 5px 10px;
+    background-color: rgb(48, 132, 138);
+    text-decoration: none;
+    display:grid;
+    align-items: flex-start;
+}
+
+/* Estilos para el formulario en dispositivos móviles */
+@media screen and (max-width:758px) {
+    html{
+        font-size: 10 px; /* Establece el tamaño de fuente del documento en dispositivos móviles */
+    }
+}
+
+/* Estilos para el formulario en dispositivos con un ancho máximo de 580px */
+@media screen and (max-width: 580px) {
+    html{
+        font-size: 10 px; /* Establece el tamaño de fuente del documento en dispositivos con un ancho máximo de 580px */
+    }
+    
+    .container-form{
+        flex-direction: column; /* Cambia la dirección del flexbox a columna en dispositivos con un ancho máximo de 580px */
+        height: auto; /* Establece la altura del contenedor al tamaño automático en dispositivos con un ancho máximo de 580px */
+    }
+}
+
